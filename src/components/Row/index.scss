@@ -1,0 +1,32 @@
+@use "../../sass/variable" as *;
+
+.row{
+
+    p{
+        font-family: Raleway;
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 29px;
+        font-size: 25px;
+        padding-bottom: 20px;
+    }
+
+
+    .right{
+        text-align: right;
+        height: 100%;
+        width: 330px;
+    }
+    
+    .center{
+        text-align: right;
+    }
+
+    input{
+       
+        background-image: ('../../assets/checkLock.png');
+    }
+
+
+    
+}

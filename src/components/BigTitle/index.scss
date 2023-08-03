@@ -1,0 +1,21 @@
+@use "../../sass/variable" as *;
+
+
+.bigtitle{
+    height: 30vh;
+    background-color: $back-ground-gray;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 50px;
+
+    h1{
+        font-family: Poppins;
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 60px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: $white;
+    }
+}

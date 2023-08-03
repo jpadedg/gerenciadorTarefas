@@ -1,0 +1,56 @@
+@use "../../sass/variable" as *;
+
+.container__card{
+    width: 758px;
+    height: 436px;
+    border-radius: 10px;
+    border: 1px $black;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-direction: column;
+    margin-bottom: 50px;
+
+    h1{
+        color: $black;
+    }
+
+    p{
+        color: $black;
+        padding: 40px 0 60px 0;
+    }
+
+    div{
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    button{
+        width: 268px;
+        height: 77px;
+        border-radius: 10px;
+        background-color: $white;
+        
+    }
+
+    a{
+        text-decoration: none;
+        font-family: Raleway;
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 35px;
+        text-align: center;
+        color: $back-ground-gray;
+    }
+
+    .card-btn-azul{
+        background-color: $blue;
+        border: 0;
+
+        a{
+            color: $white;
+        }
+    }
+}
