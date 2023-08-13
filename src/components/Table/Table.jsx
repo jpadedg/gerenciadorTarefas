@@ -17,8 +17,6 @@ const Table = () => {
     listaTarefas.push(tarefa.titulo);
   }, [])
   
-  
-
     const handleChange = (event) => {
       setNovaTarefa(event.target.value);
     }
@@ -35,6 +33,16 @@ const Table = () => {
       setTotal(total+1);
       setTarefas(newTarefas);
       setNovaTarefa('');
+      console.log(tarefas)
+    }
+
+
+    function contadorCheck(checked){
+      if(checked === checkedImg){
+        setConcluidas(concluidas+1);
+      } else {
+        setConcluidas(concluidas-1);
+      }
     }
 
   return (
@@ -59,13 +67,10 @@ const Table = () => {
             
             {tarefas && (
 
-              tarefas.map( (tarefa,index) => <Row key={index} tarefa={tarefa} check={(checked) => {
-                if(checked === checkedImg){
-                  setConcluidas(concluidas+1);
-                } else {
-                  setConcluidas(concluidas-1);
-                }
-              }}  />  )
+              tarefas.map( (tarefa,index) => <Row key={index} tarefa={tarefa} 
+                                                deleting={(tarefaExcluir) => excluir(tarefaExcluir)} 
+                                                check={(checked) => contadorCheck(checked)} 
+                                              />)
               )
             }
                  

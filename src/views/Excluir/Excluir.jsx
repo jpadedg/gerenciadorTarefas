@@ -10,7 +10,7 @@ const Excluir = () => {
         <div className='excluir'>
             <Navbar/>
             <Bigtitle/>
-            <Card type={"excluir"} tarefa={tarefa}/>
+            <Card type={"excluir"} tarefaDescricao={tarefa}/>
         </div>
     )
 

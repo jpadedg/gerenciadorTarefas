@@ -11,7 +11,7 @@ const Editar = () => {
         <div className='editar'>
             <Navbar/>
             <Bigtitle/>
-            <Card type={"editar"} tarefa={tarefa}/>
+            <Card type={"editar"} tarefaDescricao={tarefa}/>
         </div>
     )
 
