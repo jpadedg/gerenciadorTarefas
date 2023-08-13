@@ -1,11 +1,6 @@
 export const TAREFAS_MOCK = [
     {
-        titulo: "Limpar a casa",
-        
-    },
-    {
-        titulo: "Arrumar a sala",
-        
+        titulo: "Limpar a casa",  
     },
     {
         titulo: "Lavar o quintal",
