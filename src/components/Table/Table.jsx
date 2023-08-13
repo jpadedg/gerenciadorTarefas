@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Row from '../Row/Row';
 import "./index.scss" 
 import { TAREFAS_MOCK } from '../../mock/tarefas.mock.js'
+import checkedImg from "../../assets/checkUnlock.png"
 
 const Table = () => {
 
@@ -57,8 +58,14 @@ const Table = () => {
           <tbody className='table__rows'>
             
             {tarefas && (
-              
-              tarefas.map( (tarefa,index) => <Row key={index} tarefa={tarefa}  />  )
+
+              tarefas.map( (tarefa,index) => <Row key={index} tarefa={tarefa} check={(checked) => {
+                if(checked === checkedImg){
+                  setConcluidas(concluidas+1);
+                } else {
+                  setConcluidas(concluidas-1);
+                }
+              }}  />  )
               )
             }
                  
