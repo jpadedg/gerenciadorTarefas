@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Row from '../Row/Row';
 import "./index.scss" 
 import { TAREFAS_MOCK } from '../../mock/tarefas.mock.js'
@@ -7,14 +7,16 @@ const Table = () => {
 
   const [novaTarefa, setNovaTarefa] = useState(['']);
   const listaTarefas  = [];
+  const [tarefas, setTarefas] = useState(listaTarefas);
+  const [concluidas, setConcluidas] = useState(0);
+  const [total, setTotal] = useState(TAREFAS_MOCK.length);
+  
   
   TAREFAS_MOCK.map((tarefa) => {
     listaTarefas.push(tarefa.titulo);
-  })
-  console.log(listaTarefas);
+  }, [])
   
-  const [tarefas, setTarefas] = useState(listaTarefas);
-
+  
 
     const handleChange = (event) => {
       setNovaTarefa(event.target.value);
@@ -29,12 +31,15 @@ const Table = () => {
 
     function adicionar() {
       const newTarefas = [...tarefas, novaTarefa];
+      setTotal(total+1);
       setTarefas(newTarefas);
       setNovaTarefa('');
     }
 
   return (
     <div className='container'>
+
+      <h1 className='checkeds'>Concluidos {concluidas}/{total}</h1>
       <div className='table'>
         <table>
           <thead>
