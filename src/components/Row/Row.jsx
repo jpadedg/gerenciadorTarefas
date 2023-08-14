@@ -6,13 +6,15 @@ import iconNoChecked from '../../assets/checkUnlock.png'
 import iconChecked from '../../assets/checkLock.png'
 import { Link } from 'react-router-dom'
 
-const Row = ({ tarefa }) => {
+const Row = ({ tarefa , check, deleting }) => {
 
   const [imagem , setImagem] = useState(iconNoChecked)
 
   function change(){
     setImagem(state => state === iconNoChecked ? iconChecked : iconNoChecked);
+    check(imagem);
   }
+
 
   return (
     <tr className='row'>
