@@ -1,21 +1,22 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Row from '../Row/Row';
 import "./index.scss" 
 import { TAREFAS_MOCK } from '../../mock/tarefas.mock.js'
+import checkedImg from "../../assets/checkUnlock.png"
 
 const Table = () => {
 
   const [novaTarefa, setNovaTarefa] = useState(['']);
   const listaTarefas  = [];
+  const [tarefas, setTarefas] = useState(listaTarefas);
+  const [concluidas, setConcluidas] = useState(0);
+  const [total, setTotal] = useState(TAREFAS_MOCK.length);
+  
   
   TAREFAS_MOCK.map((tarefa) => {
     listaTarefas.push(tarefa.titulo);
-  })
-  console.log(listaTarefas);
+  }, [])
   
-  const [tarefas, setTarefas] = useState(listaTarefas);
-
-
     const handleChange = (event) => {
       setNovaTarefa(event.target.value);
     }
@@ -29,12 +30,30 @@ const Table = () => {
 
     function adicionar() {
       const newTarefas = [...tarefas, novaTarefa];
+      setTotal(total+1);
       setTarefas(newTarefas);
       setNovaTarefa('');
+      console.log(tarefas)
+    }
+
+
+    function contadorCheck(checked){
+      if(checked === checkedImg){
+        setConcluidas(concluidas+1);
+      } else {
+        setConcluidas(concluidas-1);
+      }
     }
 
   return (
     <div className='container'>
+
+      {total && (
+        <h1 className='checkeds'>Concluidos {concluidas}/{total}</h1>
+        ) || (
+          <h1 className='checkeds'>Vamos começar?? </h1>
+        )
+      }
       <div className='table'>
         <table>
           <thead>
@@ -52,8 +71,11 @@ const Table = () => {
           <tbody className='table__rows'>
             
             {tarefas && (
-              
-              tarefas.map( (tarefa,index) => <Row key={index} tarefa={tarefa}  />  )
+
+              tarefas.map( (tarefa,index) => <Row key={index} tarefa={tarefa} 
+                                                deleting={(tarefaExcluir) => excluir(tarefaExcluir)} 
+                                                check={(checked) => contadorCheck(checked)} 
+                                              />)
               )
             }
                  
