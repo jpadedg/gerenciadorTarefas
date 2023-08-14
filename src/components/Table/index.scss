@@ -2,12 +2,20 @@
 
 
 .container{
-    min-height: 55vh;
+    min-height: 75vh;
     background-color: $back-ground-gray;
     color: $white;
     display: flex;
     align-items: center;
     flex-direction: column;
+
+    .checkeds{
+        color: $blue;
+        opacity: 40%;
+        font-size: 50px;
+        padding: 25px 0 30px 0;
+        font-style: bold;
+    }
 
     
     .table{
