@@ -15,10 +15,15 @@ O projeto foi feito utilizando React + Vite junto com SASS para a estilização 
 ## Stack utilizada
 
 **Front-end:** React, Vite, SASS, React Router
+
 **React-version:** 18.2.0
+
 **React-Router-version:** 6.14.2
+
 **SASS-version:** 1.64.1
+
 **Vite-version:** 4.4.5
+
 
 ## Funcionalidades do Projeto
 
