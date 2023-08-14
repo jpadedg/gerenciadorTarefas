@@ -48,7 +48,12 @@ const Table = () => {
   return (
     <div className='container'>
 
-      <h1 className='checkeds'>Concluidos {concluidas}/{total}</h1>
+      {total && (
+        <h1 className='checkeds'>Concluidos {concluidas}/{total}</h1>
+        ) || (
+          <h1 className='checkeds'>Vamos começar?? </h1>
+        )
+      }
       <div className='table'>
         <table>
           <thead>
