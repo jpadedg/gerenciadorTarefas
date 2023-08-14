@@ -5,7 +5,4 @@ export const TAREFAS_MOCK = [
     {
         titulo: "Lavar o quintal",
     },
-    {
-        titulo: "Lavar o banheiro",
-    },
 ]
