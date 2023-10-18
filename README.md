@@ -34,10 +34,12 @@ O projeto foi feito utilizando React + Vite junto com SASS para a estilização 
 
 **Tela Inicial:** É onde aparecem todas as tarefas e onde pode fazer a adição de uma nova tarefa e ocorre o controle das tarefas.
 
-**Tela de Excluir/Editar:** É a tela que recebe dados de uma tarefa especifica, podendo ser direcionada a excluir ou editar. Porém essas funções não funcionam.
-
 ![image](https://github.com/jpadedg/gerenciadorTarefas/assets/57507707/a5c35e04-8c5c-4661-9bc2-8e275116c9a6)
 
+
+**Tela de Excluir/Editar:** É a tela que recebe dados de uma tarefa especifica, podendo ser direcionada a excluir ou editar. Porém essas funções não funcionam.
+
+![image](https://github.com/jpadedg/gerenciadorTarefas/assets/57507707/99c8a3a3-2224-416d-ba70-2c378f97df06)
 
 ## Autores
 
